@@ -15,9 +15,12 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    var customMessagesLaughingEmoji = ["keep it up buddie", "you are rocking my socks off!", "cool beans buddie!"]
+    
+   var customMessagesSadEmoji = ["keep fighting buddie..", "feel better champ!", "do you need some ice cream? i got u"]
     
     @IBAction func laughingEmoji(_ sender: UIButton) {
-        var alertController = UIAlertController(title: "That's awesome dude!", message: "Keep it up", preferredStyle: UIAlertController.Style.alert)
+        var alertController = UIAlertController(title: "That's awesome dude!", message: "\(customMessagesLaughingEmoji.randomElement()!)", preferredStyle: UIAlertController.Style.alert)
         
         alertController.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
         
@@ -26,7 +29,7 @@ class ViewController: UIViewController {
     
     
     @IBAction func sadEmoji(_ sender: UIButton) {
-        var alertController = UIAlertController(title: "That sucks dude", message: "Feel better buddie", preferredStyle: UIAlertController.Style.alert)
+        var alertController = UIAlertController(title: "That sucks dude", message: "\(customMessagesSadEmoji.randomElement()!)", preferredStyle: UIAlertController.Style.alert)
         
         alertController.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
         
